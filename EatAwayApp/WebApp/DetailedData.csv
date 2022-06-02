@@ -1,0 +1,2 @@
+,productId,productName,imageURL,isBrandedProduct,eans,estimatedExpirationDates,amount.quantity,amount.quantityVolume
+0,1,Barilla Spaghetti n.5,https://res.cloudinary.com/saas-ag/image/upload/v1611622938/mpreis/products/2545757.jpg,False,[],[],2,500.0

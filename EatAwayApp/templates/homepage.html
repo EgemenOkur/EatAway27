@@ -20,12 +20,22 @@
     {% block css_files %} {% endblock %}
 </head>
 <body>
+            <nav class="nav">
+                <div class="container nav-wrapper">
+                    <a href="/" class="brand-logo">EatAway</a>
+                    <ul id="nav-mobile" class="right">
+                        <li><a href="/">Home</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+
 <container>
     <h1>My To Do List</h1>
 
 <form action="/add/" method = "post">{% csrf_token %}
     <input type="text" name="content">
-    <input type="submit" value="Add Todo Item">
+    <input type="submit" value="Add Item">
 </form>
 
 

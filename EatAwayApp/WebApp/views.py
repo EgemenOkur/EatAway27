@@ -15,6 +15,6 @@ def addEatAppView(request):
     return HttpResponseRedirect('/WebApp/')
 
 def deleteEatAppView(request, i):
-    y = ConsumptionItem.objects.get(id= i)
+    y = ConsumptionItem.objects.get(id = i)
     y.delete()
     return HttpResponseRedirect('/WebApp/')

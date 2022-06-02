@@ -12,17 +12,36 @@ def print_hi(name):
     content = json.loads(r.text)
 
     df2 = pd.DataFrame([content])
+
+
     df2.to_csv('daten.csv', index=False)
     df2 = df2['stockEntries']
 
-    #print()
-    s1 = json.dumps(df2[0][0])
-    d2 = json.loads(s1)
 
-    OverviewData = json_normalize(d2)
-    OverviewData.to_csv('OverviewData.csv')
-    DetailedData = json_normalize(d2['products'])
-    DetailedData.to_csv('DetailedData.csv')
+    df1 = pd.DataFrame()
+    df4 = pd.DataFrame()
+
+    for enum,i in enumerate(df2[0]):
+        s1 = json.dumps(df2[0][enum])
+        d2 = json.loads(s1)
+        normalizedData = json_normalize(d2)
+        df1 = pd.concat([normalizedData, df1], sort=False)
+
+    df1.to_csv('OverviewData.csv')
+
+
+    for enum,j in enumerate(df1['products']):
+        DetailedData = json_normalize(j)
+        df4 = pd.concat([DetailedData, df4], sort=False)
+
+    print(df4)
+
+    df1.to_csv('DetailedData.csv')
+
+
+
+
+
     #print(json.loads(df2[0][0]))
 
     # dict1 = json.loads(str_res)

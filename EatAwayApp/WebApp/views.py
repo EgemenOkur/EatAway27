@@ -14,7 +14,7 @@ from django.db.models import Q  # New
 def EatAppView(request):
     search_post = request.GET.get('search')
 
-   #search_list = pd.read_csv('/Users/egemenokur/PycharmProjects/EatAway27/EatAwayApp/WebApp/app.csv')
+    FullList = pd.read_csv('/Users/egemenokur/PycharmProjects/EatAway27/EatAwayApp/WebApp/Appro.csv')
 
 
     if search_post:
@@ -25,9 +25,27 @@ def EatAppView(request):
         # If not searched, return default posts
         search_list = np.array(ListingItem.objects.all().values())
 
-    all_todo_items = np.array(ConsumptionItem.objects.all().values())
 
-    context = {'all_items': all_todo_items,
+
+
+    all_todo_items = pd.DataFrame(ConsumptionItem.objects.all().values())
+
+    New_Merged_list = all_todo_items.merge(FullList, how='left', on='productName')
+
+    New_Merged_list= New_Merged_list.fillna(0)
+    print(New_Merged_list)
+
+    New_Merged_list['max'] = New_Merged_list['created_at'] + pd.DateOffset(days=New_Merged_list['min'][1])
+
+
+
+    #New_Merged_list = np.append(New_Merged_list.columns.to_numpy(),New_Merged_list.to_numpy())
+
+   # New_Merged_list = pd.DataFrame(New_Merged_list, index= 'id')
+    print(New_Merged_list)
+
+
+    context = {'all_items': New_Merged_list.to_numpy(),
                'search_items': search_list
                }
 

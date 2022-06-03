@@ -17,6 +17,9 @@
     {% block css_files %} {% endblock %}
 </head>
 <body>
+
+
+<div class="All-Page">
 <nav class="nav">
     <div class="container nav-wrapper">
         <a href="/" class="brand-logo">EatAway</a>
@@ -25,6 +28,14 @@
         </ul>
     </div>
 </nav>
+
+                    <form action="/MergeWithKiwi/" method="post">{% csrf_token %}
+                                <button class="mdc-button mdc-button--raised">
+                                    <span class="mdc-button__label">Merge with Kiwi</span>
+                                </button>
+                            </form>
+
+
 <form class="form-inline my-2 my-lg-0" action="{% url 'EatAppView' %}">
     <input class="form-control mr-sm-2" type="search"   placeholder="Search" aria-label="Search" name="search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -36,22 +47,9 @@
                     </form>
 
                     {% endfor %}
-                    <form action="/MergeWithKiwi/" method="post">{% csrf_token %}
-                                <button class="mdc-button mdc-button--raised">
-                                    <span class="mdc-button__label">Merge with Kiwi</span>
-                                </button>
-                            </form>
-
 
 
 <div class="row valign">
-    <h5 class="MuiCardHeader-root">Add Product manually</h5>
-    <div class="col-12 col-sm-6 col-md-8">
-        <form action="/add/" method="post">{% csrf_token %}
-            <input type="text" name="productName">
-            <input type="submit" value="Add Item">
-        </form>
-    </div>
     <div class="inventory">
         <h5>My inventory</h5>
         <div class="mdc-data-table">
@@ -61,43 +59,41 @@
                     <tr class="mdc-data-table__header-row">
                         <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Product</th>
                         <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader"
-                            scope="col">Bought on
+                            scope="col">Date Bought
                         </th>
                         <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader"
-                            scope="col">Expiration date
+                            scope="col">Average Expiration
                         </th>
-                        <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Days left to expire</th>
+                        <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Estimated Expiration Date</th>
                         <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Consumption</th>
                     </tr>
                     </thead>
                     <tbody class="mdc-data-table__content">
                     {% for i in all_items %}
                     <tr class="mdc-data-table__row">
-                        <th class="mdc-data-table__cell" scope="row">{{i.productName}}</th>
-                        <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
-                        <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.0</td>
-                        <td class="mdc-data-table__cell">Super tasty</td>
+                        <th class="mdc-data-table__cell" scope="row">{{i.1}}</th>
+                        <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{i.2}}</td>
+                        <td class="mdc-data-table__cell mdc-data-table__cell--numeric">{{i.3}}</td>
+                        <td class="mdc-data-table__cell">{{i.4}}</td>
                         <td class="mdc-data-table__cell">
-                            <form action="/delete/{{i.id}}/" method="post">{% csrf_token %}
+                            <form action="/delete/{{i.0}}/" method="post">{% csrf_token %}
                                 <button class="mdc-button mdc-button--raised">
-                                    <span class="mdc-button__label">Delete</span>
+                                    <span class="mdc-button__label">Consumed</span>
                                 </button>
                             </form>
                         </td>
                     </tr>
                     {% endfor %}
-                    <form action="/MergeWithKiwi/" method="post">{% csrf_token %}
-                                <button class="mdc-button mdc-button--raised">
-                                    <span class="mdc-button__label">Merge with Kiwi</span>
-                                </button>
-                            </form>
+
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    </div>
     {% block content %}{% endblock %}
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     {% block js_files %} {% endblock %}
+
 </body>
 </html>

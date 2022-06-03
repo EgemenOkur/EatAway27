@@ -1,4 +1,392 @@
-.All-Page{
+.nav {
+    background-color:#223F67 ;
+}
+
+.AllPage{
+    border-radius: 3px;
+    height: 40px; /* Your height here */
+    width: 100%;
+    background-color: #1654A1;
+}
+div {
+    display: inline-block;
+}
 
 
+.mdc-button .mdc-button--raised{
+   background-color: #1654A1;
+}
+.section .card {
+    height: 40px; /* Your height here */
+    width: 100%;
+
+}
+
+.section .news .card{
+    border-radius: 3px;
+    height: 40px; /* Your height here */
+    width: 100%;
+    background-color: #1654A1;
+
+}
+
+.section .red .card{
+    border-radius: 3px;
+    height: 40px; /* Your height here */
+    width: 100%;
+    background-color: #FF4500;
+
+}
+
+.section .twit .card{
+    border-radius: 3px;
+    height: 40px; /* Your height here */
+    width: 100%;
+    background-color: #18BFEA;
+
+}
+
+.section .stock .card{
+    border-radius: 3px;
+    height: 40px; /* Your height here */
+    width: 100%;
+    background-color: #556370;
+
+}
+
+.container .card{
+    height: 50px; /* Your height here */
+}
+
+.card-image {
+    height: 250px; /* Your height here */
+    overflow:auto;
+}
+
+.col.s12.m4.l3{
+
+}
+
+
+p {
+  display: block;
+  margin-top: 1em;
+  margin-right: 10px;
+}
+
+
+.closebtn {
+  padding-left: 10px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: #000;
+}
+
+.btn-floating {
+ width: 100%;
+}
+
+.section .News .card-panel{
+    border-radius: 5px;
+    height: 800px; /* Your height here */
+    overflow:auto;
+    overflow: auto;
+    border: 1px solid #1654A1;
+}
+
+.section .Reddit .card-panel{
+    border-radius: 5px;
+    height: 800px; /* Your height here */
+    overflow:auto;
+    overflow: auto;
+    border: 1px solid #FF4500;
+}
+
+.section .Twitter .card-panel{
+    border-radius: 5px;
+    height: 800px; /* Your height here */
+    overflow:auto;
+    overflow: auto;
+    border: 1px solid #18BFEA;
+}
+
+.section .Stock-Market .card-panel{
+    border-radius: 5px;
+    height: 800px; /* Your height here */
+    overflow:auto;
+    overflow: auto;
+    border: 1px solid #556370;
+}
+
+.card-body h5{
+  color: white;
+  display: block;
+  padding: 6px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+
+.material-icons{
+    border-radius: 70%;
+}
+
+
+#Low-box {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 2px 8px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    border: 1px solid #f1f1f1;
+    border-top-width: 0;
+    font-family: DINOT,'Open Sans',Arial;
+    direction: ltr;
+    width: 80px;
+    background-color: rgb(88, 99, 111);
+}
+
+#Low{
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 7px 8px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #b71c1c;
+    border: 1px solid #f1f1f1;
+    border-top-width: 0;
+    font-family: DINOT,'Open Sans',Arial;
+    direction: ltr;
+    width: 80px;
+}
+
+#High-box {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 2px 8px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    border: 1px solid #f1f1f1;
+    border-top-width: 0;
+    font-family: DINOT,'Open Sans',Arial;
+    direction: ltr;
+    width: 80px;
+    background-color: rgb(88, 99, 111);
+}
+
+
+
+#High {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 7px 8px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #b71c1c;
+    border: 1px solid #f1f1f1;
+    border-top-width: 0;
+    font-family: DINOT,'Open Sans',Arial;
+    direction: ltr;
+    width: 80px;
+}
+
+#Price-box {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 2px 8px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    border: 1px solid #f1f1f1;
+    border-top-width: 0;
+    font-family: DINOT,'Open Sans',Arial;
+    direction: ltr;
+    width: 80px;
+    background-color: rgb(88, 99, 111);
+}
+
+#Price {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 7px 8px 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #b71c1c;
+    border: 1px solid #f1f1f1;
+    border-top-width: 0;
+    font-family: DINOT,'Open Sans',Arial;
+    direction: ltr;
+    width: 80px;
+
+}
+
+
+
+.card-panel .collapsible-header {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 1.5;
+    padding: 0px 0px 10px 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.Stock-Market .card-panel {
+    -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    margin: .5rem 0 1rem 0;
+    padding: 1px 30px 10px 30px;
+    border-radius: 2px;
+
+}
+
+body .section {
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+}
+
+.card-panel .chip {
+    display: inline-block;
+    height: 35px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.6);
+    line-height: 32px;
+    border-radius: 4px;
+    background-color: ;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border: 1px solid rgb(88, 99, 111);
+}
+
+
+.chip .btn-flat {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: #343434;
+    cursor: pointer;
+    padding: 0px;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
+}
+
+
+/*Reddit Formdaki input */
+.Reddit .card-panel input[type=text] {
+    width: 75%;
+    padding: 0px 3px 4px 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(240, 100, 60);
+    background-color: #EEEDF0;
+    height: 37px;
+    border-radius: 3px;
+}
+
+.Reddit .card-panel i.right {
+    float: right;
+    margin-left: 0px;
+}
+/*Reddit Formdaki arama butonu */
+.Reddit .card-panel .btn {
+    color: #fff;
+    background-color: rgb(240, 100, 60);
+}
+
+/*Twitter Formdaki input */
+.Twitter .card-panel input[type=text] {
+    width: 75%;
+    padding: 0px 3px 4px 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(88, 189, 229);
+    background-color: #EEEDF0;
+    height: 37px;
+    border-radius: 3px;
+}
+
+.Twitter .card-panel i.right {
+    float: right;
+    margin-left: 0px;
+}
+
+/*Twitter Formdaki arama butonu */
+.Twitter .card-panel .btn {
+    color: #fff;
+    background-color: rgb(88, 189, 229);
+}
+
+/*News Formdaki input */
+.News .card-panel input[type=text] {
+    width: 75%;
+    padding: 0px 3px 4px 10px;
+    box-sizing: border-box;
+    border: 1px solid rgb(40, 84, 156);
+    background-color: #EEEDF0;
+    height: 37px;
+    border-radius: 3px;
+}
+
+.News .card-panel i.right {
+    float: right;
+    margin-left: 0px;
+}
+
+/*News Formdaki arama butonu */
+.News .card-panel .btn {
+    color: #fff;
+    background-color: rgb(40, 84, 156);
+}
+
+h7{
+  font-size: 13px;
+  color: gray;
+}
+
+.Twitter h8{
+  font-size: 13px;
+  color: rgb(88, 189, 229);
+}
+
+.Reddit h8 {
+  font-size: 13px;
+  color: rgb(240, 100, 60);
+}
+
+.collection-item{
+  font-size: 15px;
+  color: black;
+}
+
+.Stock-Market h6 {
+  font-size: 16px;
+  color: black;
+}
+.Stock-Market h7 {
+  font-style: italic;
+  font-size: 11px;
+  color: gray;
+}
+
+h9{
+  font-size: 13px;
+  color: black;
+}
+h10{
+  font-size: 13px;
+  color: red;
 }

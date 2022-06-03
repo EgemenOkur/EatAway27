@@ -41,7 +41,7 @@ def EatAppView(request):
 
     #New_Merged_list = np.append(New_Merged_list.columns.to_numpy(),New_Merged_list.to_numpy())
 
-   # New_Merged_list = pd.DataFrame(New_Merged_list, index= 'id')
+    # New_Merged_list = pd.DataFrame(New_Merged_list, index= 'id')
     print(New_Merged_list)
 
 
@@ -53,13 +53,6 @@ def EatAppView(request):
     return render(request, 'homepage.html',context)
 
 
-"""
-    search_list = pd.read_csv('/Users/egemenokur/PycharmProjects/EatAway27/EatAwayApp/WebApp/app.csv')
-    listing = np.array(search_list)
-    for i in range(0,4):
-        print(search_list['product'][i])
-        ListingItem.objects.create(ReadeyProductName=search_list['product'][i], ApproximateProductLifeMin=search_list['min'][i], ApproximateProductLifeMax=search_list['max'][i])
-    """
 
 def addEatAppView(request):
     x = request.POST['productName']
@@ -102,3 +95,12 @@ def MergeWithKiwi(request):
         #df4 = pd.concat([DetailedData, df4], sort=False)
 
     return HttpResponseRedirect('/WebApp/')
+
+
+"""     
+    for i,j in enumerate(FullList['productName']):
+        print(FullList['productName'][i])
+        ListingItem.objects.create(ReadeyProductName=FullList['productName'][i],
+                                   ApproximateProductLifeMin=FullList['min'][i],
+                                   ApproximateProductLifeMax=FullList['max'][i])
+"""
